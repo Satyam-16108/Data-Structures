@@ -162,6 +162,35 @@ class BST
 			}
 		}
 	}
+/*void iterative_postorder()
+{
+    Stack<node *> stack;
+    node *ptr = root;
+    node *lastVisited = NULL;
+
+    while (ptr != NULL || !stack.isempty())
+    {
+        if (ptr != NULL)
+        {
+            stack.push(ptr);
+            ptr = ptr->left;
+        }
+        else
+        {
+            node *top = stack.top();
+            if (top->right != NULL && top->right != lastVisited)
+            {
+                ptr = top->right;
+            }
+            else
+            {
+                cout << top->data << " ";
+                lastVisited = stack.pop();
+            }
+        }
+    }
+}
+*/
 	void iterative_postorder()
 	{
 		Stack<node *> stack;
